@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Main</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header Section -->
+  <header class="header">
+    <img src="images/logo.png" class="logo" alt="Logo">
+    <h1>TANZA NATIONAL TRADE SCHOOL</h1>
+    <h1>SENIOR HIGH SCHOOL</h1>
+    <h1>TNTS-SHS</h1>
+    <h1>BUILDINGS</h1>
+  </header>
+
+  <!-- Main Content Section -->
+  <div class="container">
+    <!-- Main Buildings -->
+    <div class="card main-card" style="background-image: url(images/rodriguez.jpg);">
+      <div class="card-content">
+        <h1>Rodriguez</h1>
+        <div class="appir">
+          <a href="/rodrig/main.html">
+            <button class="explore-btn">EXPLORE!</button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card main-card" style="background-image: url(images/arca.jpg);">
+      <div class="card-content">
+        <h1>Arca</h1>
+        <div class="appir">
+          <a href="/arca/index.html">
+            <button class="explore-btn">EXPLORE!</button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card main-card" style="background-image: url(images/school-proj.jpg);">
+      <div class="card-content">
+        <h1>Samonte</h1>
+        <div class="appir">
+          <a href="/samont/index.html">
+            <button class="explore-btn">EXPLORE!</button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card main-card" style="background-image: url(images/mascardo.jpg);">
+      <div class="card-content">
+        <h1>Mascardo</h1>
+        <div class="appir">
+          <a href="/masca/main.html">
+            <button class="explore-btn">EXPLORE!</button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Courses Buildings -->
+    <div class="card secondary-card" style="background-image: url(images/css.jpg);">
+      <div class="card-content">
+        <h1>CSS Building</h1>
+        <div class="appir">
+          <a href="/css/main.html">
+            <button class="explore-btn">EXPLORE!</button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card secondary-card" style="background-image: url(images/hard-trade.jpg);">
+      <div class="card-content">
+        <h1>Hard Trade</h1>
+        <div class="appir">
+          <a href="/hard/main.html">
+            <button class="explore-btn">EXPLORE!</button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card secondary-card" style="background-image: url(images/soft-trade.jpg);">
+      <div class="card-content">
+        <h1>Soft Trade</h1>
+        <div class="appir">
+          <a href="/Soft Trade/main.html">
+            <button class="explore-btn">EXPLORE!</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="container2">
+        <div id="mapContainer">
+            <iframe id="mapIframe" src="mapindex.html" allow="fullscreen"></iframe>
+            <div id="searchContainer">
+            <input type="text" id="searchBar" placeholder="Search A Building">
+            <div id="suggestions"></div>
+            <button id="directionsButton" onclick="onDirectionsButtonClick()">Directions</button>
+            </div>
+        </div>
+    </div>
+
+  <script src="searchbar.js"></script>
+</body>
+</html>

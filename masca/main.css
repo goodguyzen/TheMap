@@ -1,0 +1,94 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFFDD0;
+    height: 100vh; /* Full viewport height */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-weight: 1000;
+}
+
+h2 {
+    font-weight: 1000;
+}
+
+/* Container - Enable wrapping to the next line */
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    gap: 30px; /* Increased gap between cards */
+    justify-content: center;
+    width: 100%; /* Make sure container takes full width */
+    max-width: 1400px; /* Optional: Limits the width of the container */
+    margin: 20px; /* Add margin around the container */
+}
+
+/* Floor Card Styling */
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Reduced width to fit better horizontally */
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 350px; /* Set a consistent height for the cards */
+}
+
+/* Hover Effect */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Floor Title Styling */
+.floor-card h2 {
+    color: maroon; /* Red color */
+    font-size: 2em; /* Larger font size for the floor titles */
+    margin-bottom: 20px;
+}
+
+/* Rooms container styling */
+.rooms {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Increased gap between rooms */
+}
+
+/* Room Styling */
+.room {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px; /* Increased padding for room */
+    border-radius: 4px;
+    font-size: 1.3em; /* Larger font size for room numbers */
+    transition: background-color 0.3s ease;
+}
+
+/* Room Hover Effect */
+.room:hover {
+    background-color: maroon; /* Light red on hover */
+    color: white;
+}
+
+.right-arrow {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 40px; 
+    height: 40px;
+    cursor: pointer;
+    border: solid black 2px;
+    border-radius: 50px;
+    padding: 5px;
+  }

@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fdfbd4;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+    overflow-y: auto; 
+}
+
+/* Header Section */
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 10px;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto 10px;
+    max-width: 100px;
+    height: auto;
+}
+
+h1 {
+    font-weight: 1000;
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Card Styles */
+.card {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 20px;
+    height: 300px;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card-content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.card-content .appir {
+    margin-top: 50px;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.card:hover .card-content .appir {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Main and Secondary Cards */
+.main-card {
+    flex: 1 1 calc(25% - 20px);
+    min-width: 200px;
+}
+
+.secondary-card {
+    flex: 1 1 calc(33.33% - 20px);
+    min-width: 150px;
+}
+
+.explore-btn {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    outline: none;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.explore-btn:hover {
+    background-color: #ff4c3b;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.explore-btn:focus {
+    outline: 2px solid #ff6f61;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    border-radius: 8px;
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .main-card, .secondary-card {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .main-card, .secondary-card {
+        flex: 1 1 100%;
+    }
+}
+
+#mapContainer {
+    position: relative;
+    width: 100%;
+    max-width: 960px;
+    height: 600px;
+    overflow: hidden;
+    margin: 20px auto; /* Center the map and add spacing */
+}
+
+#searchContainer {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#searchBar {
+    padding: 10px;
+    font-size: 14px;
+    width: 250px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#suggestions {
+    border: transparent;
+    border-radius: 4px;
+    max-height: 150px;
+    overflow-y: auto;
+    background-color: white;
+    position: absolute;
+    top: 50px;
+    width: 250px;
+    z-index: 1001;
+}
+
+.suggestion-item {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.suggestion-item:hover {
+    background-color: #f0f0f0;
+}
+
+#directionsButton {
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #c31d12;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#directionsButton:hover {
+    background-color: #96150c;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}

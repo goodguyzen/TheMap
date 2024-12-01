@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Map Navigation</title>
+    <link rel="stylesheet" href="searchbar.css">
+</head>
+<body>
+    <div id="mapContainer">
+        <iframe id="mapIframe" src="mapindex.html" allow="fullscreen"></iframe>
+        <div id="searchContainer">
+            <input type="text" id="searchBar" placeholder="Search A Building">
+            <div id="suggestions"></div>
+            <button id="directionsButton" onclick="onDirectionsButtonClick()">Directions</button>
+        </div>
+    </div>
+
+    <script src="searchbar.js"></script>
+</body>
+</html>
